@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+#wrapper{
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y:auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    padding:30px 60px;
+}
+
+.container .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a{
+    color: rgba(0, 0, 0, 0.378);
+}
+
+.header b{
+    font-size: 35px;
+}
+
+.header i{
+    color: rgba(0, 0, 0, 0.378);
+}
+sub{
+    color: rgba(0, 0, 0, 0.378);
+    font-weight: 200;
+}
+
+.container .content{
+    display: grid;
+    margin-top: 30px;
+    grid-gap: 30px;
+    grid-template-columns: 70% 30%;
+}
+
+.content .main .box-1 h1{
+    font-size: 40px;
+}
+
+.content a{
+    color: cornflowerblue;
+}
+.content .main .box-1 .high{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.content .main .box-3 .block{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.content .main .box-4 ul{
+    padding:0 30px;
+}
+
+.content .main .box-4 ol{
+    padding: 0 30px;
+}
+
+.scroll .about{
+    background-color: rgba(0, 0, 0, 0.083);
+    padding: 10px;
+}
+
+.scroll ul li{
+    list-style: none;
+}
+
+.footer span{
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.footer .sp1{
+    color: cornflowerblue;
+    border: 2px solid cornflowerblue;
+}
+
+.footer .sp2{
+    color: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
