@@ -2,125 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .container {
+            display: flex;
+            width: 100%;
+        }
 
-    <title>Document</title>
+        .one {
+            background: url(o.jpg)
+        }
+
+        .two {
+            background: url(t.jpg);
+        }
+
+        .three {
+            background: url(r.jpg);
+        }
+
+        .four {
+            background: url(f.jpg);
+        }
+
+        .wrapper {
+            background-size: cover;
+            height: 90vh;
+            width: 50%;
+            cursor: pointer;
+            flex: 0.3;
+            margin: 5px;
+            position: relative;
+            transition: all 0.9s linear;
+        }
+
+
+        .wrapper.active {
+            flex: 3;
+        }
+    </style>
+    <title>Expanding Cards</title>
 </head>
-<style>
-    
-    .product {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-
-    }
-
-    .container {
-        margin: 50px;
-
-
-        height: 400px;
-        width: 650px;
-        
-        border: 1px solid white;
-        border-radius: 20px 20px 20px  20px;
-        display: grid;
-       
-
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-
-        gap: 3px;
-
-        justify-content: center;
-        box-shadow: 10px 10px 10px 10px gray;
-
-    }
-
-    .wrapper img {
-        height: 400px;
-        border-radius: 20px 0 0 20px;
-
-
-
-    }
-    .coffee{
-        color: gray;
-        font-weight: 100;
-        font-size: 18px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        letter-spacing: .3em;
-    }
-    .mug{
-       font-weight: 800;
-       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-    .para{
-        color: gray;
-        font-size: 18px;
-        font-family: monospace;
-        
-
-    }
-    .rup{
-        font-size: 35px;
-        color: hsl(156, 24%, 24%);
-        font-weight: 100;
-        font-family: "Fraunces", serif;
-    }
-    .btn {
-        margin: 20px;
-        
-        display: grid;
-        width: 70%;
-        height: 9%;
-        border-radius: 10px 10px 10px 10px;
-        text-align: center;
-        border: 1px solid darkgreen;
-}
-.txt{
-   margin: 10px;
-   
-   font:bolder;
-}
-.btn:hover{
-    background-color:darkgreen;
-    color: white;
-}
-
-
-
-
-</style>
 
 <body>
-    <div class="product">
-        <div class="container">
-            <div class="wrapper"><img src="mug.jpg" alt=""></div>
-            <div class="wrapper">
-                <h2 class="coffee">COFFEE MUG</h2>
-                <h1 class="mug">White Coffee Mug</h1>
 
-                <p class="para">Coffee Mugs are designed to express emotion. These are acclaimed for thier amazing design & superior qualit.</p>
-                
-                <span class="rup"> ₹149 </span><strike>₹230</strike>
-                <span>
-                    <button class="btn">
-                       
-                       
-                       <span class="txt"><i class="fa fa-shopping-cart"></i> Add to Cart</span>
 
-                    </button>
-                </span>
-                
-            </div>
-            
-        </div>
+    <div class="container">
+
+
+        <div class="wrapper one active"></div>
+
+
+        <div class="wrapper two"></div>
+        <div class="wrapper three"></div>
+        <div class="wrapper four"></div>
     </div>
+
+    <script>
+
+
+        const wrappers = document.querySelectorAll(".wrapper");
+
+
+        wrappers.forEach((wrapper) => {
+            wrapper.addEventListener("click", () => {
+
+
+                wrappers.forEach((wrapper) => {
+                    wrapper.classList.remove("active");
+                });
+                wrapper.classList.add("active");
+            });
+        });
+    </script>
 </body>
 
 </html>
